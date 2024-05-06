@@ -1,10 +1,8 @@
+// ignore_for_file: file_names
+
 import 'package:burnley_victoria_mill/Common/data.dart';
 import 'package:burnley_victoria_mill/Pages/CampusPage.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
@@ -18,13 +16,13 @@ class ExplorePage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: Text('Explore Campus'),
+          title: const Text('Explore Campus'),
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Expanded(
@@ -62,8 +60,8 @@ class ExplorePage extends StatelessWidget {
                               left: 0,
                               right: 0,
                               child: Container(
-                                padding: EdgeInsets.all(8.0),
-                                decoration: BoxDecoration(
+                                padding: const EdgeInsets.all(8.0),
+                                decoration: const BoxDecoration(
                                   color: Colors.black54,
                                   borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(10),
@@ -72,7 +70,7 @@ class ExplorePage extends StatelessWidget {
                                 ),
                                 child: Text(
                                   imgdata[index]["title"].toString(),
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,

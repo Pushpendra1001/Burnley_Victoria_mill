@@ -1,6 +1,5 @@
 import 'package:burnley_victoria_mill/Pages/CollegeExplorePage.dart';
 import 'package:burnley_victoria_mill/Pages/HomePage.dart';
-import 'package:burnley_victoria_mill/Pages/VideoPlayerScreen.dart';
 import 'package:burnley_victoria_mill/Common/color.dart';
 import 'package:burnley_victoria_mill/Pages/view360page.dart';
 import 'package:flutter/cupertino.dart';
@@ -19,8 +18,8 @@ class _BottomBarWidgetState extends State<BottomBarWidget> {
   int _selectedIndex = 0;
 
   final List<Widget> _widgetOptions = <Widget>[
-    HomePage(),
-    ExplorePage(),
+    const HomePage(),
+    const ExplorePage(),
     View360Page(),
   ];
 

@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
@@ -68,7 +70,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
               IconButton(
                 icon: const Icon(Icons.replay_10),
                 onPressed: () {
-                  _controller.seekTo(Duration(seconds: 10));
+                  _controller.seekTo(const Duration(seconds: 10));
                 },
               ),
               IconButton(

@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:burnley_victoria_mill/Pages/HomePage.dart';
 import 'package:burnley_victoria_mill/widgets/bottombar.dart';
 
@@ -19,6 +21,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: BottomBarWidget());
+        home: const BottomBarWidget());
   }
 }

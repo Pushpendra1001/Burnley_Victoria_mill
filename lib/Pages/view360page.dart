@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:panorama_viewer/panorama_viewer.dart';
 
 class View360Page extends StatefulWidget {
-  View360Page({
+  const View360Page({
     super.key,
   });
 

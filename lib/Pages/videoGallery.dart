@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'VideoPlayerScreen.dart';
 
@@ -37,7 +39,7 @@ class VideoGalleryScreen extends StatelessWidget {
             child: Container(
               margin: const EdgeInsets.all(8.0),
               decoration: BoxDecoration(
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: AssetImage("assets/img2.jpeg"),
                   fit: BoxFit.cover,
                 ),

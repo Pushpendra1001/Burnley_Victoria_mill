@@ -1,28 +1,20 @@
-import 'package:burnley_victoria_mill/Pages/VideoPlayerScreen.dart';
+// ignore_for_file: file_names
+
 import 'package:burnley_victoria_mill/Pages/videoGallery.dart';
 import 'package:burnley_victoria_mill/Pages/view360page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:panorama_viewer/panorama_viewer.dart';
-
-import 'package:video_player/video_player.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  late VideoPlayerController _controller;
-
   @override
   void initState() {
-    _controller = VideoPlayerController.asset(
-      'assets/vid1.mp4',
-    );
-
     super.initState();
   }
 
@@ -30,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Burnley Victoria mill",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
@@ -39,6 +31,7 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            // ignore: sized_box_for_whitespace
             Container(
               height: MediaQuery.of(context).size.height * 0.6,
               child: Padding(
@@ -49,8 +42,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
+            const Padding(
+              padding: EdgeInsets.all(16.0),
               child: Text(
                 "The Burnley Victoria Mill campus is a significant part of the University of Central Lancashire’s (UCLan) presence in Burnley, offering a vibrant and inclusive educational environment. This campus, which is a blend of historical architecture and modern facilities, provides students with a unique learning experience. The Victoria Mill, a Victorian-era factory, has been repurposed into a contemporary university setting, reflecting UCLan’s commitment to integrating tradition with innovation. Students at the Burnley campus can enjoy small class sizes, fostering a close-knit community atmosphere, while benefiting from state-of-the-art facilities such as cutting-edge manufacturing suites, observation suites, and moot courtrooms1. The campus is not only a place for academic pursuits but also serves as a hub where students, businesses, and the local community collaborate to foster growth and learning. With its recent expansion, including the conversion of Newtown Mill into a canal-side campus, UCLan’s Burnley campus is poised to offer an even richer educational landscape23.",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
@@ -63,7 +56,7 @@ class _HomePageState extends State<HomePage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => View360Page(),
+                        builder: (context) => const View360Page(),
                       ));
                 },
                 child: Container(
@@ -77,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                     "Explore in 360",
                     style: GoogleFonts.juliusSansOne(
                         textStyle:
-                            TextStyle(fontSize: 24, color: Colors.white)),
+                            const TextStyle(fontSize: 24, color: Colors.white)),
                   )),
                 ),
               ),
@@ -103,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                     "View Video of Campus",
                     style: GoogleFonts.juliusSansOne(
                         textStyle:
-                            TextStyle(fontSize: 24, color: Colors.white)),
+                            const TextStyle(fontSize: 24, color: Colors.white)),
                   )),
                 ),
               ),

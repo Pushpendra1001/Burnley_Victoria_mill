@@ -1,12 +1,12 @@
+// ignore_for_file: unused_import, file_names
+
 import 'package:burnley_victoria_mill/Common/data.dart';
 import 'package:burnley_victoria_mill/Pages/view360.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CampusScreen extends StatelessWidget {
-  CampusScreen({super.key, required this.data});
+  const CampusScreen({super.key, required this.data});
 
   final Map data;
 
@@ -14,7 +14,7 @@ class CampusScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Victoria Mill'),
+        title: const Text('Victoria Mill'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -23,9 +23,9 @@ class CampusScreen extends StatelessWidget {
             children: [
               Text(
                 data["title"] ?? 'Default Title',
-                style: TextStyle(fontSize: 32),
+                style: const TextStyle(fontSize: 32),
               ),
-              Container(
+              SizedBox(
                 height: MediaQuery.of(context).size.height * 0.8,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -51,8 +51,8 @@ class CampusScreen extends StatelessWidget {
                             child: Text(
                           "View in 360",
                           style: GoogleFonts.juliusSansOne(
-                              textStyle:
-                                  TextStyle(fontSize: 24, color: Colors.white)),
+                              textStyle: const TextStyle(
+                                  fontSize: 24, color: Colors.white)),
                         )),
                       ),
                     )
